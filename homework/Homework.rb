@@ -50,7 +50,7 @@ module Homework
       return time if minutesToAdd == 0 || minutesToAdd == 1440 || minutesToAdd == -1440
       self.convertMinutestoAMPM(self.convertTimeToMinutes(time) + minutesToAdd)
     else
-      puts 'The time format is invalid or you are trying to add/subtract more than a 1440 minutes (1 day) from the given time.'
+      puts 'The time format is invalid or you are trying to add/subtract is more than 1440 minutes (1 day) from the given time.'
     end
   end
 end
