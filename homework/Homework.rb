@@ -4,18 +4,18 @@ module Homework
   end
 
   def self.convertTimeToMinutes(time)
-    hour_minute = time.split(' ')[0].split(':')
-    hour = hour_minute[0].to_i
-    minute = hour_minute[1].to_i
+    hourMinute = time.split(' ')[0].split(':')
+    hour = hourMinute[0].to_i
+    minute = hourMinute[1].to_i
     am_pm = time.split(' ').last
     if hour == 12 && am_pm == 'AM'
-      new_hour = hour - 12
+      newHour = hour - 12
     elsif hour.between?(1,11) && am_pm == 'PM'
-      new_hour = hour + 12
+      newHour = hour + 12
     else
-      new_hour = hour
+      newHour = hour
     end
-    (new_hour * 60) + minute
+    (newHour * 60) + minute
   end
 
   # This method is a little odd looking as it has to
